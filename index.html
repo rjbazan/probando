@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>AngularJS With TypeScript</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">Click the following button to get your favorite tracks.</div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div ng-view="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="app/routes.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/services.js"></script>
+    <script src="app/controllers.js"></script>
+    <script src="app/interfaces.js"></script>
+</body>
+</html>
