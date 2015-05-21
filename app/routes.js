@@ -12,6 +12,11 @@ var myApp;
                 templateUrl: "/app/views/playlist.html",
                 controllerAs: "playList"
             });
+            $routeProvider.when("/home/:id", {
+                controller: "controllers.detailsController",
+                templateUrl: "/app/views/details.html",
+                controllerAs: "details"
+            });
             $routeProvider.otherwise({ redirectTo: "/home" });
         };
         Routes.$inject = ["$routeProvider"];

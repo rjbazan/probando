@@ -1,10 +1,13 @@
+<h1>Listado de personas</h1>
 <div class="jumbotron">
-    <ul class="list-group">
-
-        <li  class="list-group-item" ng-repeat="album in playList.artista.items" >
-            {{album.name}}
-
-        </li>
-    </ul>
-    <button class="btn btn-block" ng-click="playList.getFavourites()">Get Favorites Tracks</button>
+<div class="row" ng-repeat="p in playList.personas">
+  <div class="col-xs-6 col-md-4">
+    <a href="#/home/{{$index}}" class="thumbnail">
+      <img ng-src="{{p.picture}}" >
+    </a>
+  </div>
+ <div class="col-xs-6 col-md-8">
+ 	{{p.name}}
+ </div>
+</div>
 </div>

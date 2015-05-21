@@ -7,12 +7,18 @@ module myApp {
   export class Routes{
     static $inject = ["$routeProvider"];
     static configureRoutes($routeProvider: ng.route.IRouteProvider){
-      $routeProvider.when("/home",
+    $routeProvider.when("/home",
       {
-        controller:"controllers.mainController",
-        templateUrl:"/app/views/playlist.html",
-        controllerAs:"playList"
-      });
+        controller: "controllers.mainController",
+        templateUrl: "/app/views/playlist.html",
+        controllerAs: "playList"
+      })
+      $routeProvider.when("/home/:id",
+      {
+        controller:"controllers.detailsController",
+        templateUrl:"/app/views/details.html",
+        controllerAs:"details"
+      })
       $routeProvider.otherwise({redirectTo: "/home"})
     }
   }

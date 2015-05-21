@@ -20,9 +20,9 @@ module services{
         ]
     }
 
-    getAll():ng.IPromise<any>{
-        return this.$http.get('https://api.spotify.com/v1/search?q=' + 'metallica' + '&type=album,artist')
-            .then((response: ng.IHttpPromiseCallbackArg<any>) => {
+    getAll():ng.IPromise<interfaces.IUser>{
+        return this.$http.get('http://www.json-generator.com/api/json/get/cdzsccBOiG?indent=2')
+            .then((response: ng.IHttpPromiseCallbackArg<interfaces.IUser>):interfaces.IUser => {
                 return response.data;
             });               
     }
