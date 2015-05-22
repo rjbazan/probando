@@ -15,8 +15,7 @@ var services;
             ];
         };
         PlaylistService.prototype.getAll = function () {
-            return this.$http.get('http://www.json-generator.com/api/json/get/cdzsccBOiG?indent=2')
-                .then(function (response) {
+            return this.$http.get('http://www.json-generator.com/api/json/get/cdzsccBOiG?indent=2').then(function (response) {
                 return response.data;
             });
         };

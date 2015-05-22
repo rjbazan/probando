@@ -22,6 +22,12 @@ module interfaces{
     email: string;
     phone: number;
   }
+  export interface RouteParams {
+      id: string;
+  }
+  export interface Scope{
+      id: string;
+  }
   /*export interface IUser{
     _id: string;
     picture:string;

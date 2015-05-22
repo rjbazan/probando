@@ -20,19 +20,13 @@ var controllers;
     })();
     controllers.mainController = mainController;
     var detailsController = (function () {
-        function detailsController(plaListService, $routeParams) {
+        function detailsController(plaListService, routeParams, $scope) {
             var vm = this;
-            console.log($routeParams.id);
-            console.log(this.id = this.getId($routeParams.id));
-            vm.index = parseInt(this.getId($routeParams.id));
-            console.log(vm.index);
+            vm.index = $scope.id;
             plaListService.getAll().then(function (data) {
-                vm.persona = data[vm.index];
+                vm.persona = data[$scope.id];
             });
         }
-        detailsController.prototype.getId = function (input) {
-            return (input || "Not present");
-        };
         detailsController.$inject = ["services.PlaylistService", "$scope", "$routeParams"];
         return detailsController;
     })();
