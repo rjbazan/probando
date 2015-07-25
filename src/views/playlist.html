@@ -1,0 +1,13 @@
+<h1>Listado de personas</h1>
+<div class="jumbotron">
+<div class="row" ng-repeat="artist in artistsController.artists">
+  <div class="col-xs-6 col-md-4">
+    <a href="#/home/{{$index}}" class="thumbnail">
+      <img ng-src="{{artist.images[0].url}}" >
+    </a>
+  </div>
+ <div class="col-xs-6 col-md-8">
+ 	{{artist.name}}
+ </div>
+</div>
+</div>

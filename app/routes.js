@@ -1,5 +1,5 @@
 /// <reference path="../typings/angularjs/angular-route.d.ts" />
-/// <reference path="./controllers.ts" />
+/// <reference path="./controllers/controllers.ts" />
 /// <reference path="../typings/angularjs/angular.d.ts" />
 var myApp;
 (function (myApp) {
@@ -10,7 +10,7 @@ var myApp;
             $routeProvider.when("/home", {
                 controller: "controllers.mainController",
                 templateUrl: "/app/views/playlist.html",
-                controllerAs: "playList"
+                controllerAs: "artistController"
             });
             $routeProvider.when("/home/:id", {
                 controller: "controllers.detailsController",

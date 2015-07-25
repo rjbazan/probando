@@ -1,13 +1,10 @@
 <h1>Listado de personas</h1>
 <div class="jumbotron">
-<div class="row" ng-repeat="p in playList.personas">
-  <div class="col-xs-6 col-md-4">
-    <a href="#/home/{{$index}}" class="thumbnail">
-      <img ng-src="{{p.picture}}" >
+<div class="col" ng-repeat="artist in artistController.artists">
+  <div class="col-xs-6 col-md-4" >
+    <a href="#/home/{{artist.id}}" class="thumbnail">
+      <img ng-src="{{artist.images[1].url}}" class="img-responsive">
     </a>
   </div>
- <div class="col-xs-6 col-md-8">
- 	{{p.name}}
- </div>
 </div>
 </div>

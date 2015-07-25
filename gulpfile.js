@@ -5,7 +5,7 @@ var runseq = require('run-sequence');
 
 var paths = {
 	tscripts : { src : ['src/**/*.ts'],
-				dest : 'app' }
+				dest : 'app' }			
 };
 
 gulp.task('default', ['buildrun']);
